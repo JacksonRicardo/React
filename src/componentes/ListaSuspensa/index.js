@@ -1,11 +1,10 @@
 import './ListaSuspensa.css'
 
 const ListaSuspensa = (propos) => {
-    console.log(propos.itens)
     return(
         <div className='lista-suspensa'>
             <label>{propos.label}</label>
-            <select required={propos.required}>
+            <select onChange={evento =>propos.aoAlterado(evento.target.value)} required={propos.required} value={propos.value}>
                 {propos.itens.map(item => {
                 return <option key={item}>{item}</option>})}
             </select>

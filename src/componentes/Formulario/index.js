@@ -54,7 +54,7 @@ const Formulario = () => {
                     label="Time" 
                     itens={times}
                     valor={time}
-                    aoAlterado={valor => setImagem(valor)}
+                    aoAlterado={valor => setTime(valor)}
                 />
                 <Botao texto="Criar Card"/>
 
